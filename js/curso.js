@@ -24,7 +24,7 @@ var CURSOS = [
     descricao: 'Conheça formas de utilizar a Inteligência Artificial no planejamento e nas atividades educacionais.',
     aulas: [
       { titulo: 'IA no planejamento de aulas', video: 'https://youtu.be/DQbueJcbD3c', duracao: 14 },
-      { titulo: 'Ferramentas de IA para professores', video: 'https://youtu.be/COLE_AQUI_O_ID_DO_VIDEO', duracao: 18 },
+      { titulo: 'Ferramentas de IA para professores', video: 'https://youtu.be/uNZIs71VwCs', duracao: 40 },
       { titulo: 'Aplicando a IA na prática', video: 'https://youtu.be/jgWLntXzDOU', duracao: 20 }
     ]
   },
