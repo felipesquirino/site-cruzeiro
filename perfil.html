@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduIa — Perfil</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+    <div class="card profile-card">
+      <div class="profile-avatar" id="profile-avatar">A</div>
+      <h1 class="text-center" id="profile-nome">Nome do Usuário</h1>
+      <p class="text-center muted">Professora(o) em formação</p>
+
+      <div class="profile-info">
+        <div class="profile-row">
+          <span class="profile-row-label">Nome</span>
+          <span class="profile-row-value" id="profile-nome-valor">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="profile-row-label">E-mail</span>
+          <span class="profile-row-value" id="profile-email-valor">—</span>
+        </div>
+      </div>
+
+      <!-- Formulário de edição do nome -->
+      <h3 class="mb-16">Editar nome</h3>
+      <form id="form-editar-nome">
+        <div class="form-group">
+          <label for="novo-nome">Novo nome</label>
+          <input type="text" id="novo-nome" placeholder="Digite seu novo nome" />
+        </div>
+        <div class="form-error" id="perfil-error"></div>
+        <div class="form-success" id="perfil-success"></div>
+        <button type="submit" class="btn btn-primary btn-block">Salvar alterações</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/perfil.js"></script>
+  <script>
+    var sessao = initPagina('perfil');
+    if (sessao) {
+      carregarPerfil(sessao);
+      configurarEdicaoNome(sessao);
+    }
+  </script>
+</body>
+</html>

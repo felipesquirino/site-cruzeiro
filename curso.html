@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduIa — Curso</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+    <!-- Cabeçalho do curso (preenchido pelo JavaScript) -->
+    <div class="course-header" id="course-header">
+      <!-- nome, descrição e barra de progresso aparecem aqui -->
+    </div>
+
+    <!-- Lista de aulas (preenchida pelo JavaScript) -->
+    <div id="lessons-container"></div>
+
+    <!-- Mensagem de conclusão (aparece quando todas as aulas estão feitas) -->
+    <div id="complete-message" class="hidden"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/curso.js"></script>
+  <script src="js/quiz-modulos.js"></script>
+  <script src="js/avaliacao.js"></script>
+  <script src="js/base-conhecimento.js"></script>
+  <script src="js/assistente.js"></script>
+  <script>
+    // Inicializa a página e carrega o curso
+    var sessao = initPagina('cursos');
+    if (sessao) {
+      carregarCurso(sessao.email);
+    }
+  </script>
+</body>
+</html>

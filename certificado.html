@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduIa — Certificado</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar" class="no-print"></div>
+
+  <div class="cert-page">
+    <div class="cert-wrapper">
+      <!-- Mensagem de erro (se o curso não foi concluído) -->
+      <div id="cert-error" class="hidden"></div>
+
+      <!-- Certificado -->
+      <div id="cert-content" class="hidden">
+        <div class="certificate">
+          <div class="cert-band"></div>
+          <div class="cert-brand">
+            <img class="cert-logo" alt="EduIa" />
+            <span class="cert-brand-name">EduIa</span>
+          </div>
+          <h1 class="cert-title">CERTIFICADO DE CONCLUSÃO</h1>
+          <p class="cert-text">Certificamos que</p>
+          <div class="cert-name" id="cert-nome">Nome do Usuário</div>
+          <p class="cert-text">concluiu com sucesso os 3 módulos da formação</p>
+          <ul class="cert-modulos" id="cert-modulos"></ul>
+          <p class="cert-platform">Plataforma para Formação de Professores com IA</p>
+
+          <div class="cert-meta">
+            <div class="cert-meta-item">
+              <div class="cert-meta-label">Data de conclusão</div>
+              <div class="cert-meta-value" id="cert-data">—</div>
+            </div>
+            <div class="cert-meta-item">
+              <div class="cert-meta-label">Carga horária</div>
+              <div class="cert-meta-value" id="cert-carga">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-actions no-print">
+          <button class="btn btn-primary" id="btn-pdf" onclick="gerarPDF()">&#128196; Gerar PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/curso.js"></script>
+  <script src="js/certificado.js"></script>
+  <script>
+    var sessao = initPagina('certificados');
+    if (sessao) {
+      carregarCertificado(sessao);
+    }
+  </script>
+</body>
+</html>

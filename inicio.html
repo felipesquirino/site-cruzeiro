@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduIa — Início</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+    <!-- Hero de boas-vindas -->
+    <div class="hero">
+      <h1 id="saudacao">Olá!</h1>
+      <p>Continue sua formação e aprenda novas possibilidades de utilizar a IA na educação.</p>
+    </div>
+
+    <!-- Três opções principais -->
+    <h2 class="mb-24">O que você deseja fazer?</h2>
+    <div class="card-grid mb-32">
+      <a href="cursos.html" class="card card-hover" style="text-decoration:none">
+        <div class="card-icon">&#128218;</div>
+        <h3>Cursos</h3>
+        <p class="mt-8">Acesse os cursos disponíveis sobre Inteligência Artificial na educação.</p>
+      </a>
+      <a href="certificado.html" class="card card-hover" style="text-decoration:none">
+        <div class="card-icon">&#127891;</div>
+        <h3>Certificados</h3>
+        <p class="mt-8">Veja seus certificados de conclusão de cursos.</p>
+      </a>
+      <a href="plano-aula.html" class="card card-hover" style="text-decoration:none">
+        <div class="card-icon">&#128221;</div>
+        <h3>Plano de Aula</h3>
+        <p class="mt-8">Acesse o material complementar com o plano de aula pronto.</p>
+      </a>
+    </div>
+
+    <!-- Seção "Continue sua formação" -->
+    <h2 class="mb-16">Continue sua formação</h2>
+    <div class="card" id="curso-andamento">
+      <!-- Preenchido pelo JavaScript -->
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/curso.js"></script>
+  <script src="js/base-conhecimento.js"></script>
+  <script src="js/assistente.js"></script>
+  <script>
+    // Inicializa a página
+    var sessao = initPagina('inicio');
+    if (sessao) {
+      // Mostra o nome do usuário na saudação
+      document.getElementById('saudacao').textContent = 'Olá, ' + sessao.nome + '!';
+
+      // Mostra o curso em andamento (se houver)
+      mostrarCursoAndamento(sessao.email);
+    }
+  </script>
+</body>
+</html>

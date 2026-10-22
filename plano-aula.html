@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduIa — Plano de Aula</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container">
+    <div class="card plano-card">
+      <div class="plano-icon">&#128221;</div>
+      <h1>Plano de Aula</h1>
+      <h2 class="mt-8" style="font-size:1.1rem; color:var(--cinza-500)">Material complementar</h2>
+
+      <p class="plano-desc">
+        Após concluir o curso, você pode acessar o plano de aula preparado para complementar
+        sua formação. Este material serve como exemplo de como aplicar os conhecimentos
+        adquiridos sobre Inteligência Artificial em suas aulas.
+      </p>
+
+      <div id="plano-acesso"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/curso.js"></script>
+  <script>
+    var sessao = initPagina('plano');
+    if (sessao) {
+      var area = document.getElementById('plano-acesso');
+      if (todosModulosConcluidos(sessao.email)) {
+        area.innerHTML =
+          '<a href="pdf/plano-de-aula.pdf" target="_blank" class="btn btn-primary">&#128206; Visualizar plano de aula</a> ' +
+          '<a href="pdf/plano-de-aula.pdf" download="plano-de-aula-eduia.pdf" class="btn btn-outline">&#11015; Baixar PDF</a>';
+      } else {
+        area.innerHTML =
+          '<div class="alert alert-info">O plano de aula é liberado ao concluir os 3 módulos da formação. ' +
+          '<a href="cursos.html">Ir para os módulos</a></div>';
+      }
+    }
+  </script>
+</body>
+</html>

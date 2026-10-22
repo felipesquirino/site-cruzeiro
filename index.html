@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduIa — Login</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="split-page">
+    <section class="split-brand">
+      <div class="brand-content">
+        <img src="img/logo.svg" alt="EduIa" class="brand-logo" />
+        <h1 class="brand-name">EduIa</h1>
+        <p class="brand-tagline">Plataforma para formação de professores com IA</p>
+        <p class="brand-desc">Aprenda e utilize a Inteligência Artificial na educação.</p>
+      </div>
+      <div class="brand-circle brand-circle-1"></div>
+      <div class="brand-circle brand-circle-2"></div>
+    </section>
+    <section class="split-form">
+      <div class="split-form-inner">
+        <h2 class="form-heading">Bem-vindo(a)</h2>
+        <p class="form-sub">Entre com seus dados para acessar os cursos.</p>
+        <div class="alert alert-success hidden" id="cadastro-ok">Cadastro realizado com sucesso! Faça login com os dados que você acabou de criar.</div>
+
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Sua senha" autocomplete="current-password" />
+          </div>
+          <div class="form-error" id="login-error"></div>
+          <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        </form>
+
+        <p class="auth-link">
+          Ainda não possui uma conta? <a href="cadastro.html">Cadastre-se</a>
+        </p>
+      </div>
+    </section>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
