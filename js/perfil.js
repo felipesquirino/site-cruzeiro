@@ -1,9 +1,3 @@
-/* ============================================================
-   EduIa — perfil.js
-   Mostra os dados do usuário e permite editar o nome.
-   O nome atualizado é salvo no localStorage (sessão e cadastro).
-   ============================================================ */
-
 /* ---------- Mostrar os dados do usuário na tela ---------- */
 function carregarPerfil(sessao) {
   // Primeira letra do nome para o avatar
