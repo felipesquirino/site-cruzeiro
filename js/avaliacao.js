@@ -1,13 +1,3 @@
-/* ============================================================
-   EduIa — avaliacao.js
-   Questionário FINAL do módulo (avaliacao.html?curso=N).
-   - 8 perguntas objetivas sobre os 3 vídeos do módulo (js/quiz-modulos.js).
-   - É preciso responder TODAS as perguntas para enviar (se faltar alguma, o site avisa quantas faltam).
-   - Para passar é preciso acertar no mínimo 5 de 8. Aprovado = próximo módulo liberado.
-   - Tentativas e resultados ficam no localStorage (apenas neste navegador).
-   Requer: script.js, curso.js (regras e armazenamento) e quiz-modulos.js.
-   ============================================================ */
-
 function escaparHtml(txt) {
   return String(txt == null ? '' : txt).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
