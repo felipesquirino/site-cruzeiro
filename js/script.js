@@ -1,12 +1,3 @@
-/* ============================================================
-   EduIa — script.js
-   Funções compartilhadas entre todas as páginas:
-   - Verificar se o usuário está logado
-   - Montar a barra de navegação
-   - Fazer logout
-   - Obter dados do usuário
-   ============================================================ */
-
 const CHAVE_SESSAO = 'eduia_sessao';
 
 /* ---------- Obter usuário logado ---------- */
