@@ -1,10 +1,3 @@
-/* ============================================================
-   EduIa — js/base-conhecimento.js
-   Base de conhecimento PREDEFINIDA do Assistente de Estudos (não usa IA nem API).
-   Cada item: t = título; k = palavras-chave (sem acento, minúsculas);
-              r = resposta; a = [módulo, aula] relacionados (opcional).
-   Para ampliar: copie um item e ajuste. O assistente procura as palavras-chave na pergunta.
-   ============================================================ */
 var BASE_CONHECIMENTO = [
   { t: 'O que é Inteligência Artificial?', a: [1, 1],
     k: ['o que e ia', 'o que e inteligencia artificial', 'inteligencia artificial', 'definicao', 'conceito de ia', 'o que significa ia'],
