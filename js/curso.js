@@ -1,12 +1,3 @@
-/* ============================================================
-   EduIa — curso.js
-   Controla as aulas, o progresso e a conclusão dos cursos.
-   Usa localStorage para salvar quais aulas foram concluídas.
-   ============================================================ */
-
-/* ---------- Lista de cursos (dados fixos) ----------
-   Para trocar um vídeo: cole o link normal do YouTube em "video" (https://youtu.be/ID ou https://www.youtube.com/watch?v=ID)
-   e ajuste "duracao" (em minutos) — a carga horária do certificado é a soma das durações. */
 var CURSOS = [
   {
     id: 1,
@@ -64,14 +55,6 @@ function calcularCargaHorariaTotal() {
   return h + 'h ' + m + 'min';
 }
 
-/* ---------- Player de vídeo (YouTube) ----------
-   Erro 153 do YouTube = a página não enviou o endereço de origem (Referer). Correções aplicadas:
-   (1) meta "referrer" no <head> de curso.html e referrerpolicy no iframe;
-   (2) parâmetros origin e widget_referrer na URL do player (identificam o site);
-   (3) a API do player avisa quando há erro: nesse caso o vídeo é trocado por um botão
-       "Assistir no YouTube", então o aluno nunca fica com o player quebrado;
-   (4) abrindo o .html direto do computador (file://) o YouTube nunca aceita o player:
-       mostramos o botão desde o início. */
 function idYoutube(url) {
   // aceita youtu.be/ID, youtube.com/watch?v=ID e youtube.com/embed/ID
   var m = /(?:youtu\.be\/|\/embed\/|[?&]v=)([\w-]{6,})/.exec(url || '');
@@ -154,13 +137,9 @@ function salvarAulasConcluidas(email, cursoId, lista) {
 }
 
 /* ============================================================
-   Questionário do módulo e bloqueio de fases (v8)
+   Questionário do módulo e bloqueio de fases
    ============================================================
-   Regras:
-   - Dentro do módulo, o vídeo seguinte só abre depois que o anterior for marcado como concluído.
-   - Depois de marcar os 3 vídeos, o aluno recebe o Guia de Revisão (PDF) e, logo em seguida, o questionário do módulo.
-   - O questionário tem 8 perguntas e é preciso acertar no mínimo 5 (veja js/quiz-modulos.js).
-   - O próximo módulo só é liberado com o questionário do módulo anterior aprovado. */
+
 function chaveQuizModulo(email, cursoId) {
   return 'eduia_quiz_modulo_' + email + '_' + cursoId;
 }
