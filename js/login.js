@@ -1,8 +1,5 @@
 /* ---------- Chaves usadas no localStorage ---------- */
 const CHAVE_USUARIOS = 'eduia_usuarios';      // lista de usuários cadastrados
-// CHAVE_SESSAO já é declarada em script.js — reutilizada aqui
-
-/* ---------- Funções auxiliares de localStorage ---------- */
 
 // Lê a lista de usuários cadastrados
 function obterUsuarios() {
