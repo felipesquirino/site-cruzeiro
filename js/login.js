@@ -1,8 +1,3 @@
-/* ============================================================
-   EduIa — login.js
-   Controla o cadastro e o login de usuários usando localStorage.
-   ============================================================ */
-
 /* ---------- Chaves usadas no localStorage ---------- */
 const CHAVE_USUARIOS = 'eduia_usuarios';      // lista de usuários cadastrados
 // CHAVE_SESSAO já é declarada em script.js — reutilizada aqui
