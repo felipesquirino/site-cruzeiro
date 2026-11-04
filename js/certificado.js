@@ -1,9 +1,3 @@
-/* ============================================================
-   EduIa — certificado.js
-   Mostra o certificado final da formação.
-   Só é liberado quando os 3 módulos estiverem concluídos.
-   ============================================================ */
-
 function carregarCertificado(sessao) {
   var divErro = document.getElementById('cert-error');
   var divConteudo = document.getElementById('cert-content');
