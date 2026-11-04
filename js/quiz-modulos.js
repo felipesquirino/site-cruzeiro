@@ -1,15 +1,6 @@
 /* ============================================================
-   EduIa — js/quiz-modulos.js
-   Questionário FINAL de cada módulo: 8 perguntas objetivas sobre os 3 vídeos do módulo,
-   com ênfase no Guia de Revisão (PDF). Para passar é preciso acertar no mínimo 5.
+   Questionário FINAL de cada módulo: 8 perguntas objetivas sobre os 3 vídeos do módulo, para passar é preciso acertar no mínimo 5.
    Tudo é predefinido: sem IA e sem servidor. A correção é automática (no avaliacao.js).
-
-   COMO EDITAR UMA PERGUNTA
-   - enunciado: texto da pergunta
-   - alternativas: sempre 4 opções (a ordem é embaralhada a cada tentativa)
-   - correta: posição da alternativa certa dentro da lista (0 = primeira, 1 = segunda, 2 = terceira, 3 = quarta)
-   - aula: número do vídeo (1 a 3) que o aluno deve rever se errar
-   - explicacao: aparece na correção
 
    ATENÇÃO: o gabarito fica no navegador; quem abrir as ferramentas de desenvolvedor consegue ler.
    ============================================================ */
