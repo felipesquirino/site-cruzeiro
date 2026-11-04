@@ -1,13 +1,3 @@
-/* ============================================================
-   EduIa — assistente.js
-   Assistente de Estudos: botão flutuante + painel de conversa DENTRO do site.
-   - Responde a partir de uma base de conhecimento predefinida (js/base-conhecimento.js).
-     Não usa API, chave, internet nem tem limite de uso. NÃO é IA generativa.
-   - Para perguntas livres, há atalhos que abrem ChatGPT, Claude ou Gemini em nova aba
-     (sites oficiais não podem ser exibidos dentro de outros sites), com a pergunta já copiada.
-   - O histórico da conversa fica em sessionStorage (dura enquanto a aba estiver aberta).
-   Requer: script.js (obterSessao), curso.js (obterCursoPorId) e base-conhecimento.js.
-   ============================================================ */
 (function () {
   var MAX_HISTORICO = 30;
   var sessao = typeof obterSessao === 'function' ? obterSessao() : null;
