@@ -1,10 +1,3 @@
-/* ============================================================
-   EduIa — Plataforma para Formação de Professores com IA
-   Folha de estilos principal
-   Todas as páginas usam este arquivo CSS.
-   ============================================================ */
-
-/* ---------- Variáveis de cor (paleta azul) ---------- */
 :root {
   --azul-50:  #eef4fb;
   --azul-100: #d6e4f5;
@@ -643,11 +636,6 @@ p  { color: var(--cinza-600); }
 .certificate.cert-pdf .cert-platform { margin-top: 10px; }
 .certificate.cert-pdf .cert-name { margin: 8px 0; }
 
-/* ============================================================
-   NOVAS FUNCIONALIDADES (v2) — Tutora IA e Avaliação pós-aula
-   Reutiliza as variáveis de cor e os componentes existentes.
-   ============================================================ */
-
 /* ---------- Avaliação: bloco dentro da aula ---------- */
 .avaliacao-area { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--cinza-200); display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .quiz-badge { font-size: 0.85rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
@@ -723,12 +711,6 @@ p  { color: var(--cinza-600); }
   .quiz-tabela { display: block; overflow-x: auto; }
 }
 
-/* ============================================================
-   Certificado — ajustes do PDF (v3)
-   Só afetam o clone usado em gerarPDF(); a prévia na tela não muda.
-   O html2canvas não suporta "background-clip: text" nem centralização por flex
-   com alturas fixas; por isso o PDF usa cor sólida no título e fluxo em bloco.
-   ============================================================ */
 .certificate.cert-pdf { display: block; padding: 66px 60px 40px; }
 /* mesmos espaçamentos da prévia (substituem as margens compactas anteriores do PDF) */
 .certificate.cert-pdf .cert-brand { margin: 8px 0 18px; }
